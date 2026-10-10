@@ -1,0 +1,304 @@
+.table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  overflow-x: auto;
+  border: 1px solid #303238;
+  border-radius: 12px;
+  background-color: #191b20;
+}
+
+.operations-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.operations-table th {
+  padding: 18px 20px;
+  background-color: #24262c;
+  color: #d4af37;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.operations-table td {
+  padding: 18px 20px;
+  color: #e5e5e5;
+  font-size: 15px;
+  border-top: 1px solid #303238;
+}
+
+.operations-table tbody tr:hover {
+  background-color: #252830;
+}
+
+/* Operations search */
+
+.operations-search {
+  width: 100%;
+  max-width: 900px;
+  margin: 28px auto 36px;
+}
+
+.operations-search input {
+  width: 100%;
+  padding: 15px 18px;
+  background-color: #191b20;
+  color: #f5f5f5;
+  border: 1px solid #383c45;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.2s ease;
+}
+
+.operations-search input::placeholder {
+  color: #888d98;
+}
+
+.operations-search input:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+@media (max-width: 768px) {
+  .operations-search {
+    margin: 24px auto 30px;
+  }
+
+  .operations-search input {
+    padding: 13px 14px;
+    font-size: 14px;
+  }
+}
+
+/* Operations filters */
+
+.operations-filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: left;
+}
+
+.operations-filters > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.operations-filters label {
+  color: #d4d6dc;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.operations-filters select {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: #191b20;
+  color: #f5f5f5;
+  border: 1px solid #383c45;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.operations-filters select:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+@media (max-width: 768px) {
+  .operations-filters {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+.delete-button {
+  padding: 9px 15px;
+  background-color: transparent;
+  color: #ef7777;
+  border: 1px solid #a84c4c;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: #432525;
+}
+
+/* Delete confirmation modal */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.delete-modal {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px 30px;
+  background-color: #1b1d23;
+  border: 1px solid #383c45;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #432525;
+  color: #f87171;
+  border-radius: 50%;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.delete-modal h3 {
+  margin: 0 0 15px;
+  color: #f5f5f5;
+  font-size: 24px;
+}
+
+.delete-modal p {
+  margin: 0 0 30px;
+  color: #b8bbc3;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 13px 16px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal-cancel {
+  background-color: #303238;
+  color: #f5f5f5;
+  border: 1px solid #454851;
+}
+
+.modal-cancel:hover {
+  background-color: #42454d;
+}
+
+.modal-confirm {
+  background-color: #b83b3b;
+  color: #ffffff;
+  border: 1px solid #b83b3b;
+}
+
+.modal-confirm:hover {
+  background-color: #d04444;
+}
+
+@media (max-width: 480px) {
+  .delete-modal {
+    padding: 28px 20px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+}
+
+/* Operation action buttons */
+
+.operation-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-button {
+  padding: 9px 15px;
+  background-color: transparent;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.edit-button:hover {
+  background-color: rgba(212, 175, 55, 0.15);
+}
+
+.details-button {
+  background-color: transparent;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.details-button:hover {
+  background-color: #d4af37;
+  color: #101114;
+}
+
+.details-button:focus-visible {
+  outline: 2px solid #f5d76e;
+  outline-offset: 3px;
+}
+.view-button {
+  background-color: transparent;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-button:hover {
+  background-color: #d4af37;
+  color: #101114;
+}
+
+.view-button:focus-visible {
+  outline: 2px solid #f5d76e;
+  outline-offset: 3px;
+}

@@ -1,0 +1,150 @@
+.market-dashboard {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #17191f;
+  border: 1px solid #30333b;
+  border-radius: 12px;
+}
+
+.market-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.market-label {
+  color: #d4af37;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.market-header h2 {
+  color: #ffffff;
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.market-header p {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.market-card {
+  padding: 24px;
+  background-color: #20232b;
+  border: 1px solid #353842;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.market-card:hover {
+  border-color: #d4af37;
+  transform: translateY(-3px);
+}
+
+.market-card h3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.market-price {
+  color: #d4af37;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.market-unit {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.market-date {
+  color: #7f8794;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.market-error {
+  color: #f87171;
+  font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+  .market-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .market-dashboard {
+    padding: 20px;
+  }
+
+  .market-header h2 {
+    font-size: 23px;
+  }
+
+  .market-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .market-card {
+    padding: 20px;
+  }
+
+  .market-price {
+    font-size: 25px;
+  }
+}
+
+.market-details {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #353842;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.market-details p {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.market-details span {
+  color: #9ca3af;
+  text-align: left;
+}
+
+.market-details strong {
+  color: #e5e7eb;
+  font-weight: 500;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.market-card {
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .market-details p {
+    font-size: 11px;
+  }
+}

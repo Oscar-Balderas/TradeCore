@@ -1,0 +1,119 @@
+.market-history {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #17191f;
+  border: 1px solid #30333b;
+  border-radius: 12px;
+}
+
+.market-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.market-history-label {
+  color: #d4af37;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.market-history-header h2 {
+  color: #ffffff;
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.market-history-header p {
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.market-history-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px;
+}
+
+.market-history-filter label {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.market-history-filter select {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #20232b;
+  color: #ffffff;
+  border: 1px solid #353842;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.market-history-filter select:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.market-history-info {
+  margin-bottom: 24px;
+  padding: 20px;
+  background-color: #20232b;
+  border: 1px solid #353842;
+  border-radius: 10px;
+}
+
+.market-history-info h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.market-history-info p {
+  color: #9ca3af;
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+.market-history-chart {
+  width: 100%;
+  min-width: 0;
+  padding: 24px 12px 12px;
+  background-color: #20232b;
+  border: 1px solid #353842;
+  border-radius: 10px;
+}
+
+.market-history-error {
+  color: #f87171;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .market-history {
+    padding: 20px;
+  }
+
+  .market-history-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .market-history-header h2 {
+    font-size: 23px;
+  }
+
+  .market-history-filter {
+    min-width: 0;
+  }
+
+  .market-history-chart {
+    padding: 16px 4px 8px;
+  }
+}

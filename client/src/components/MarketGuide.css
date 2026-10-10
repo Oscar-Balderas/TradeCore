@@ -1,0 +1,139 @@
+.market-guide {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #17191f;
+  border: 1px solid #30333b;
+  border-radius: 12px;
+}
+
+.market-guide-header {
+  margin-bottom: 28px;
+}
+
+.market-guide-label {
+  color: #d4af37;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.market-guide-header h2 {
+  color: #ffffff;
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.market-guide-header p {
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.market-guide-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.market-guide-item {
+  background-color: #20232b;
+  border: 1px solid #353842;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.market-guide-item:hover {
+  border-color: #8b742e;
+}
+
+.market-guide-question {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.market-guide-question span:last-child {
+  color: #d4af37;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.market-guide-question:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: -3px;
+}
+
+.market-guide-answer {
+  padding: 0 24px 24px;
+  color: #b9c0cc;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.market-guide-answer p {
+  margin: 0 0 14px;
+}
+
+.market-guide-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.market-guide-answer ul {
+  padding-left: 22px;
+  margin: 12px 0 18px;
+}
+
+.market-guide-answer li {
+  margin-bottom: 12px;
+}
+
+.market-guide-answer strong {
+  color: #e5e7eb;
+}
+
+.market-guide-example {
+  padding: 20px;
+  margin: 18px 0;
+  background-color: #17191f;
+  border-left: 3px solid #d4af37;
+  border-radius: 6px;
+}
+
+.market-guide-example strong {
+  color: #d4af37;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .market-guide {
+    padding: 20px;
+  }
+
+  .market-guide-header h2 {
+    font-size: 23px;
+  }
+
+  .market-guide-question {
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  .market-guide-answer {
+    padding: 0 18px 20px;
+    font-size: 13px;
+  }
+
+  .market-guide-example {
+    padding: 16px;
+  }
+}
