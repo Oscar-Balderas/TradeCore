@@ -154,7 +154,8 @@ function OperationsList({ refreshKey }) {
             <option value="All">All Statuses</option>
             <option value="Negotiation">Negotiation</option>
             <option value="Confirmed">Confirmed</option>
-            <option value="Pending">Pending</option>
+            <option value="In Transit">In Transit</option>
+            <option value="Delivered">Delivered</option>
           </select>
         </div>
       </div>

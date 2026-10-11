@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./OperationForm.css";
 
 function OperationForm({ onOperationCreated }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     product: "",
     operationType: "",
@@ -28,6 +29,9 @@ function OperationForm({ onOperationCreated }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
 
     try {
       const response = await fetch("/api/operations", {
@@ -51,6 +55,8 @@ function OperationForm({ onOperationCreated }) {
       onOperationCreated();
     } catch (error) {
       console.error("Error creating operation:", error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -158,6 +164,7 @@ function OperationForm({ onOperationCreated }) {
             placeholder="e.g. Gold Mining Company"
             value={formData.supplier}
             onChange={handleChange}
+            required
           />
         </div>
 
@@ -170,6 +177,7 @@ function OperationForm({ onOperationCreated }) {
             placeholder="e.g. International Buyer LLC"
             value={formData.client}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
@@ -191,6 +199,7 @@ function OperationForm({ onOperationCreated }) {
             name="incoterm"
             value={formData.incoterm}
             onChange={handleChange}
+            required
           >
             <option value="">Select Incoterm</option>
             <option value="EXW">EXW</option>
@@ -212,7 +221,8 @@ function OperationForm({ onOperationCreated }) {
           >
             <option value="Negotiation">Negotiation</option>
             <option value="Confirmed">Confirmed</option>
-            <option value="Pending">Pending</option>
+            <option value="In Transit">In Transit</option>
+            <option value="Delivered">Delivered</option>
           </select>
         </div>
 
@@ -227,7 +237,9 @@ function OperationForm({ onOperationCreated }) {
             onChange={handleChange}
           />
         </div>
-        <button type="submit">Register Operation</button>
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Registering..." : "Register Operation"}
+        </button>
       </form>
     </section>
   );
